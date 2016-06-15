@@ -7,6 +7,10 @@
 //
 
 #import "FISAppDelegate.h"
+#import "FISVehicle.h"
+#import "FISCar.h"
+#import "FISPlane.h"
+#import "FISRaceCar.h"
 
 
 
@@ -14,6 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    FISVehicle *basicVehicleClass = [[FISVehicle alloc] initWithWeight:356 topSpeed:5000];
+    [basicVehicleClass turnLeft];
+    NSLog(@"%f", basicVehicleClass.currentDirection);
+    
+    FISCar *lexus = [[FISCar alloc] initWithCylinders:6 isAutomatic:YES];
+    [lexus turnRight];
+    NSLog(@"%f", lexus.currentDirection);
+    
+    FISPlane *jetBlue = [[FISPlane alloc] init];
+    [jetBlue increaseAltitude];
+    [jetBlue increaseSpeed];
+    [jetBlue turnRight];
+    NSLog(@"%f %f %f", jetBlue.currentAltitude, jetBlue.currentSpeed, jetBlue.currentDirection);
+    
+    FISRaceCar *daytona = [[FISRaceCar alloc] init];
+    [daytona increaseSpeed];
+    NSLog(@"%f %id", daytona.currentSpeed, daytona.isAutomatic);
+    
     return YES;
 }
 
