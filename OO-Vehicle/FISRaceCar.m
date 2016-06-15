@@ -13,7 +13,6 @@
 - (instancetype)init {
     self = [super initWithCylinders:8 isAutomatic:NO];
     if (self) {
-        self.weight = 1270;
         self.topSpeed = 615;
         _sponsors = @[@"KFC", @"Taco Bell", @"Pizza Hut"];
     }

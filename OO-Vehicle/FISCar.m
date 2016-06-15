@@ -17,8 +17,6 @@
 - (instancetype)initWithCylinders:(CGFloat)cylinders isAutomatic:(BOOL)isAutomatic {
     self = [super initWithWeight:1270 topSpeed:88];
     if (self) {
-        self.currentSpeed = 0;
-        self.currentDirection = 0;
         _cylinders = cylinders;
         _isAutomatic = isAutomatic;
     }
